@@ -1,1 +1,5 @@
-Hello <?=$data['name']?> 
+Hello <?= $data['name'] ?>
+
+<?
+echo base_url() . 'welcome';
+?>

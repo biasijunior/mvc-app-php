@@ -7,3 +7,8 @@ require_once 'database.php';
 require_once 'core/App.php';
 
 require_once 'core/Controller.php';
+
+function base_url()
+{
+  return 'http://biasiwiga.dz/';
+}

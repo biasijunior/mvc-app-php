@@ -15,6 +15,16 @@ class Controller {
 
     public function view($view, $data = [])
     {
-        require_once '../app/views/' . $view . '.php';
+
+        $ext = '.php';
+        $ext = $ext ? '.php' : '.phtml';
+        $path = '../app/views/' . $view . $ext;
+  if (file_exists($path)){
+            require_once $path;
+  }else{
+      require_once $path = '../app/views/' . $view . '.phtml';
+  }
+       
+        
     }
 }
